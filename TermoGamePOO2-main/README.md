@@ -22,8 +22,26 @@ Critérios de aceitação: o usuário deve digitar as deduções de letras
 
 ### 3. Indicadores de Progresso
 
-Como usuário, quero saber se acertei a letra e sua posição com a cor `verde` {c:green}verde.{/c}
+Como usuário, quero saber se acertei a letra e sua posição com a cor `verde`.
 
-Como usuário, quero saber se acertei a letra, porém errei sua posição com a cor `azul` {c:blue}azul.{/c}.
+Como usuário, quero saber se acertei a letra, porém errei sua posição com a cor `azul`.
 
 Critérios de aceitação: o usuário deve digitar as deduções de letras 
+
+### 4. Tentativas do Jogo
+
+Como usuário, quero ter mais de uma tentativa para a palavra.
+
+Critérios de aceitação: o usuário terá 5 tentativas para acertar a palavra.
+
+### 5. Reinicialização do Jogo
+
+Como usuário, quero poder reiniciar o jogo ao acertar ou errar uma palavra.
+
+Critérios de aceitação: o usuário acertar ou errar alguma palavra após suas 5 tentativas.
+
+### 6. Palavra Correta
+
+Como usuário, em caso de erro nas 5 tentativas, quero saber qual a palavra correta.
+
+Critérios de aceitação: o usuário errar as 5 tentativas.
