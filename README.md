@@ -22,12 +22,15 @@ O objetivo principal foi aplicar os pilares da POO no desenvolvimento de uma apl
 ## 🎮 Demonstração & Deploy
 Se você é um recrutador e quer ver o projeto funcionando agora mesmo:
 
-### Execução do projeto.
+* **🌐 Ver Online (Caso tenha deploy):** [Acesse o link do projeto]
+
+### Execução do projeto (Web).
 
 ![Preview do Projeto](docs/termoGameGif.gif)
 
-* **🌐 Ver Online (Caso tenha deploy):** [Acesse o link do projeto]
+### Execução do projeto (Mobile).
 
+![Preview do Projeto](docs/termoGameMobile.gif)
 ---
 
 ## 🛠️ Tecnologias e Conceitos
