@@ -2,6 +2,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
+  <img src="https://img.shields.io/badge/Vaadin-00B4F0?style=for-the-badge&logo=vaadin&logoColor=white" alt="Vaadin">
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
   <img src="https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge" alt="Status">
   <img src="https://img.shields.io/badge/POO--II-Sistemas%20de%20Informação-blue?style=for-the-badge" alt="Matéria">
 </p>
@@ -32,6 +34,8 @@ Se você é um recrutador e quer ver o projeto funcionando agora mesmo:
 * **Linguagem:** Java (JDK 17+)
 * **Lógica de Jogo:** Comparação de vetores de caracteres para feedback visual (Verde, Amarelo, Cinza).
 * **Framework Web:** **Vaadin** (Interface reativa e componentes Java-based)
+* **Gerenciamento de Dependências:** Maven.
+* **Infraestrutura:** Docker (Containerização para deploy padronizado).
 * **Pilares de POO Aplicados:**
     * **Encapsulamento:** Proteção da lógica de sorteio e validação das palavras secretas.
     * **Abstração:** Representação fiel das regras de negócio do jogo original.
@@ -57,6 +61,20 @@ Se você é um recrutador e quer ver o projeto funcionando agora mesmo:
 
 3. Acesse no seu navegador: http://localhost:8080
 
+
+## 🐳 Como Rodar com Docker
+Este projeto está containerizado, o que garante que ele rode perfeitamente em qualquer ambiente.
+
+1. **Construir a imagem:**
+   ```bash
+   docker build -t termogame .
+
+2. **Executar o container::**
+   ```bash
+   docker run -p 8080:8080 termogame .
+
+
+3. Acesse http://localhost:8080 no seu navegador.
 
 ## 🎯 Funcionalidades Implementadas
 
