@@ -63,7 +63,7 @@ Se você é um recrutador e quer ver o projeto funcionando agora mesmo:
 
 
 ## 🐳 Como Rodar com Docker
-Este projeto está containerizado, o que garante que ele rode perfeitamente em qualquer ambiente.
+Este projeto está containerizado, o que garante que ele rode perfeitamente em qualquer ambiente. O projeto utiliza imagens Docker baseadas em Eclipse Temurin para garantir conformidade com as práticas atuais de segurança e performance em ambientes de nuvem
 
 1. **Construir a imagem:**
    ```bash
