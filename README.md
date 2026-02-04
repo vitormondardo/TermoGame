@@ -1,135 +1,45 @@
-# 🧩 Termo Clone - Java
+# My App
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
-  <img src="https://img.shields.io/badge/Vaadin-00B4F0?style=for-the-badge&logo=vaadin&logoColor=white" alt="Vaadin">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
-  <img src="https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge" alt="Status">
-  <img src="https://img.shields.io/badge/POO--II-Sistemas%20de%20Informação-blue?style=for-the-badge" alt="Matéria">
-</p>
+This project can be used as a starting point to create your own Vaadin application with Spring Boot.
+It contains all the necessary configuration and some placeholder files to get you started.
 
----
+## Running the application
 
-## 📌 Sobre o Projeto
-Este é um clone do popular jogo de palavras **Termo**, desenvolvido inteiramente em **Java**. O projeto foi criado como requisito parcial para a disciplina de **Programação Orientada a Objetos II**, sob a orientação do **Professor Leanderson Andre**.
+The project is a standard Maven project. To run it from the command line,
+type `mvnw` (Windows), or `./mvnw` (Mac & Linux), then open
+http://localhost:8080 in your browser.
 
-O objetivo principal foi aplicar os pilares da POO no desenvolvimento de uma aplicação que exige lógica de validação de strings, manipulação de estados e interação com o usuário.
+You can also import the project to your IDE of choice as you would with any
+Maven project. Read more on [how to import Vaadin projects to different IDEs](https://vaadin.com/docs/latest/guide/step-by-step/importing) (Eclipse, IntelliJ IDEA, NetBeans, and VS Code).
 
-> **Nota Acadêmica:** Trabalho integrante do curso de Bacharelado em **Sistemas de Informação** e **Engenharia de Software**.
+## Deploying to Production
 
----
+To create a production build, call `mvnw clean package -Pproduction` (Windows),
+or `./mvnw clean package -Pproduction` (Mac & Linux).
+This will build a JAR file with all the dependencies and front-end resources,
+ready to be deployed. The file can be found in the `target` folder after the build completes.
 
-## 🎮 Demonstração & Deploy
-Se você é um recrutador e quer ver o projeto funcionando agora mesmo:
+Once the JAR file is built, you can run it using
+`java -jar target/my-app-1.0-SNAPSHOT.jar`
 
-* **🌐 Ver Online (Caso tenha deploy):** [Acesse o link do projeto]
+## Project structure
 
-### Execução do projeto (Web).
+- `MainLayout.java` in `src/main/java` contains the navigation setup (i.e., the
+  side/top bar and the main menu). This setup uses
+  [App Layout](https://vaadin.com/docs/components/app-layout).
+- `views` package in `src/main/java` contains the server-side Java views of your application.
+- `views` folder in `frontend/` contains the client-side JavaScript views of your application.
+- `themes` folder in `frontend/` contains the custom CSS styles.
 
-![Preview do Projeto](docs/termoGameGif.gif)
+## Useful links
 
-### Execução do projeto (Mobile).
-
-![Preview do Projeto](docs/termoGameMobile.gif)
----
-
-## 🛠️ Tecnologias e Conceitos
-* **Linguagem:** Java (JDK 17+)
-* **Lógica de Jogo:** Comparação de vetores de caracteres para feedback visual (Verde, Amarelo, Cinza).
-* **Framework Web:** **Vaadin** (Interface reativa e componentes Java-based)
-* **Gerenciamento de Dependências:** Maven.
-* **Infraestrutura:** Docker (Containerização para deploy padronizado).
-* **Pilares de POO Aplicados:**
-    * **Encapsulamento:** Proteção da lógica de sorteio e validação das palavras secretas.
-    * **Abstração:** Representação fiel das regras de negócio do jogo original.
-    * **Polimorfismo/Herança:** Classes de interface.
-
----
-
-## 💻 Como Rodar na sua Máquina
-
-### Pré-requisitos
-* Java JDK 17 ou superior instalado.
-* Uma IDE (IntelliJ, Eclipse ou VS Code).
-
-### Passo a Passo
-1. Clone este repositório:
-   ```bash
-   git clone [https://github.com/seu-usuario/nome-do-seu-repositorio.git](https://github.com/seu-usuario/nome-do-seu-repositorio.git)
-
-2. No terminal, dentro da pasta do projeto, execute:
-   ```bash
-    bash
-    mvn spring-boot:run
-
-3. Acesse no seu navegador: http://localhost:8080
-
-
-## 🐳 Como Rodar com Docker
-Este projeto está containerizado, o que garante que ele rode perfeitamente em qualquer ambiente. O projeto utiliza imagens Docker baseadas em Eclipse Temurin para garantir conformidade com as práticas atuais de segurança e performance em ambientes de nuvem
-
-1. **Construir a imagem:**
-   ```bash
-   docker build -t termogame .
-
-2. **Executar o container::**
-   ```bash
-   docker run -p 8080:8080 termogame .
-
-
-3. Acesse http://localhost:8080 no seu navegador.
-
-## 🎯 Funcionalidades Implementadas
-
-* [x] Interface Web responsiva com componentes Vaadin.
-
-* [x] Sorteio de palavras dinâmico.
-
-* [x] Feedback visual colorido (Verde, Amarelo e Cinza).
-
-* [x] Teclado virtual integrado à tela.
-
-* [x] Tratamento de tentativas e fim de jogo.
-------------------------------------------------------------------------------------------------------------------------------------
-### UML Diagram
-![](docs/TermoGame.drawio.png)
-
-## User Stories
-
-### 1. Adivinhação da Palavra:
-
-Como usuário, eu quero ser desafiado com palavras diferentes a cada rodada.
-
-Critérios de aceitação: o usuário deve digitar as suas deduções para adivinhar a palavra. 
-
-### 2. Feedback Visual da Adivinhação:
-
-Como jogador, quero saber a correta posição da letra conforme a sua cor. 
-
-Critérios de aceitação: o usuário deve digitar as deduções de letras 
-
-### 3. Indicadores de Progresso
-
-Como usuário, quero saber se acertei a letra e sua posição com a cor <span style="color:#2ECC71">Verde</span>
-
-Como usuário, quero saber se acertei a letra, porém errei sua posição com a cor <span style="color:blue">Azul</span>.
-
-Critérios de aceitação: o usuário deve digitar as deduções de letras 
-
-### 4. Tentativas do Jogo
-
-Como usuário, quero ter mais de uma tentativa para a palavra.
-
-Critérios de aceitação: o usuário terá 5 tentativas para acertar a palavra.
-
-### 5. Reinicialização do Jogo
-
-Como usuário, quero poder reiniciar o jogo ao acertar ou errar uma palavra.
-
-Critérios de aceitação: o usuário acertar ou errar alguma palavra após suas 5 tentativas.
-
-### 6. Palavra Correta
-
-Como usuário, em caso de erro nas 5 tentativas, quero saber qual a palavra correta.
-
-Critérios de aceitação: o usuário errar as 5 tentativas.
+- Read the documentation at [vaadin.com/docs](https://vaadin.com/docs).
+- Follow the tutorial at [vaadin.com/docs/latest/tutorial/overview](https://vaadin.com/docs/latest/tutorial/overview).
+- Create new projects at [start.vaadin.com](https://start.vaadin.com/).
+- Search UI components and their usage examples at [vaadin.com/docs/latest/components](https://vaadin.com/docs/latest/components).
+- View use case applications that demonstrate Vaadin capabilities at [vaadin.com/examples-and-demos](https://vaadin.com/examples-and-demos).
+- Build any UI without custom CSS by discovering Vaadin's set of [CSS utility classes](https://vaadin.com/docs/styling/lumo/utility-classes). 
+- Find a collection of solutions to common use cases at [cookbook.vaadin.com](https://cookbook.vaadin.com/).
+- Find add-ons at [vaadin.com/directory](https://vaadin.com/directory).
+- Ask questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/vaadin) or join our [Discord channel](https://discord.gg/MYFq5RTbBn).
+- Report issues, create pull requests in [GitHub](https://github.com/vaadin).

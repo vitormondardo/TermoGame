@@ -1,11 +1,14 @@
-# Estágio 1: Compilação (Build)
+# Estágio 1: Build
 FROM maven:3.8.5-openjdk-17 AS build
+WORKDIR /app
 COPY . .
-RUN mvn clean install -DskipTests -Pproduction
+# Agora o comando roda direto na raiz
+RUN mvn clean package -DskipTests -Pproduction
 
-# Estágio 2: Execução (Runtime)
-# Trocamos a imagem obsoleta por uma ativa e segura
+# Estágio 2: Execução
 FROM eclipse-temurin:17-jdk-alpine
-COPY --from=build /target/*.jar app.jar
+WORKDIR /app
+# O arquivo JAR agora será gerado na pasta target da raiz
+COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
